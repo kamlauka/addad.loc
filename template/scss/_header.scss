@@ -1,0 +1,55 @@
+.header {
+  background-color: $color-main;
+  padding: 10px 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  //display: flex;
+  //flex-direction: row;
+  //flex-wrap: nowrap;
+  &__icon {
+    vertical-align: middle;
+  }
+
+  &__name {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    font-family: $font-main-bold;
+    font-size: 19px;
+    color: $color-white;
+  }
+
+}
+
+.mini-button {
+  width: 35px;
+  height: 30px;
+  text-decoration: none;
+
+  &_icon_liked {
+    background: url("../images/icon-like-white.png") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &_icon_language {
+    background: url("../images/icon-language.png") no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+
+.sign {
+  &__sign-in {
+    padding: 10px 20px;
+    background-color: $color-add;
+  }
+}

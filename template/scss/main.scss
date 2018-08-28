@@ -1,0 +1,83 @@
+@import "variables.scss";
+@import "header.scss";
+@import "search-bar.scss";
+@import "find-your-adversiting.scss";
+
+
+@font-face {
+  font-family: "Raleway Bold";
+  src: url("../fonts/Raleway-v4020-Bold.ttf") format("ttf"),
+  url("../fonts/Raleway-v4020-Bold.eot") format("eot"),
+  url("../fonts/Raleway-v4020-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Raleway Regular";
+  src: url("../fonts/Raleway-v4020-Regular.ttf") format("ttf"),
+  url("../fonts/Raleway-v4020-Regular.eot") format("eot"),
+  url("../fonts/Raleway-v4020-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Raleway Medium";
+  src: url("../fonts/Raleway-v4020-Medium.ttf") format("ttf"),
+  url("../fonts/Raleway-v4020-Medium.eot") format("eot"),
+  url("../fonts/Raleway-v4020-Medium.woff") format("woff");
+}
+
+.wrapper {
+  margin: 0 auto;
+
+  &_mini {
+    max-width: 1140px;
+  }
+
+  &_medium {
+    max-width: 1170px;
+  }
+
+  &_large {
+    max-width: 1280px;
+  }
+}
+
+
+.button {
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-family: $font-main-bold;
+  text-transform: uppercase;
+  &_search:before {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 11px;
+    background: url("../images/icon-search.png") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &_sign-in {
+    text-transform: capitalize;
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 13px;
+      height: 15px;
+      margin-right: 11px;
+      background: url("../images/icon-user.png") no-repeat;
+      background-size: 100% 100%;
+    }
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 13px;
+      height: 15px;
+      margin-left: 30px;
+      background: url(../images/arrow-down-white.png) no-repeat;
+      background-size: contain;
+      background-position: bottom;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.find-your-advertising {
+  //padding-top: 11em;
+  padding-top: 8em;
+  padding-bottom: 100px;
+  min-height: 93vh;
+  box-sizing: border-box;
+  background: url(../images/background-find-your.png) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  &__button {
+    padding: 12px 30px;
+    background-color: $color-add;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 15px;
+      margin-left: 10px;
+      background: url(../images/arrow-down-white.png) no-repeat;
+      transform: rotate(-90deg);
+      background-size: contain;
+      background-position: bottom;
+    }
+  }
+}
+
+.title-large {
+  width: 14em;
+  font-family: $font-main-bold;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  color: $color-add;
+  letter-spacing: 0.05em;
+}
+
+.link-cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 5em;
+
+
+}
+
+.link-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10em;
+  width: 30%;
+  border-radius: 8px;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  background-color: $color-white;
+  background: radial-gradient(circle at 30px 40px, #F8F8F8 93px, #EAEAEA 100px, #FFFFFF 100px);
+  color: $color-add-light;
+  box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.1);
+
+  &:nth-child(3n+3) {
+    margin-right: 0;
+  }
+
+  &_circle_red {
+    background: radial-gradient(circle at 30px 40px, $color-main 100px, #FFFFFF 101px);
+  }
+
+  &__text {
+    width: 12em;
+  }
+
+  &__name {
+    font-family: $font-add;
+    text-transform: uppercase;
+    font-weight: 700;
+    max-width: 10em;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100px;
+      border-bottom: 1px solid #C7C7C7;
+      margin-top: 10px;
+    }
+
+    &_large-text {
+      max-width: 11em;
+    }
+  }
+
+  &__digit-ads {
+    font-family: $font-main-medium;
+  }
+
+  &__image {
+    border-style: none;
+    margin-left: 7%;
+    position: relative;
+    top: -25px;
+  }
+}

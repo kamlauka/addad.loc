@@ -1,0 +1,23 @@
+.search-bar {
+  padding: 5px 5px 5px 30px;
+  border-radius: 30px;
+  background-color: $color-white;
+
+  &__element {
+    border: 0;
+    border-right: 1px solid gray;
+    width: 14em;
+    font-family: $font-main-medium;
+
+    &_region {
+      width: 7em;
+    }
+  }
+
+  &__button {
+    padding: 10px 30px;
+    margin-left: 20px;
+    background-color: $color-main;
+  }
+}
+
