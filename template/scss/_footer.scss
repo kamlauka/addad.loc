@@ -1,0 +1,41 @@
+.footer {
+  @extend %header-footer;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__up {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: url("../images/arrow-up-dark-gray.png") center no-repeat, $color-white;
+    cursor: pointer;
+  }
+}
+
+.nav {
+  &__link {
+    color: white;
+    text-decoration: none;
+    font-family: $font-main-medium;
+    font-size: 0.9em;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:not(:nth-last-child(1)) {
+      &:after {
+        content: '|';
+        color: $color-white;
+        padding: 0 20px;
+        font-size: 1.2em;
+      }
+    }
+  }
+}

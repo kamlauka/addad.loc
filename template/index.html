@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.css">
 </head>
@@ -17,13 +17,29 @@
 
             <div class="search-bar header__search-bar">
                 <input class="search-bar__element keywords-input" type="search" placeholder="Введите ключевое слово">
-                <select class="search-bar__element rubric" name="" placeholder="Выберите рубрику"></select>
-                <select class="search-bar__element search-bar__element_region region" name="" placeholder="Регион"></select>
+                <div class="search-bar__select-container">
+                    <select class="search-bar__element select" name="" placeholder="Выберите рубрику">
+                        <option value="">Выберите рубрику</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                </div>
+                <div class="search-bar__select-container">
+                    <select class="search-bar__element search-bar__element_region select" name="" placeholder="Регион">
+                        <option value="">Регион</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                </div>
                 <button class="search-bar__button button"><span class="button_search">Найти</span></button>
             </div>
 
-            <a class="mini-button mini-button_icon_liked header__mini-button"></a>
-            <a class="mini-button mini-button_icon_language header__mini-button"></a>
+            <div class="header__mini-button-container">
+                <a class="mini-button mini-button_icon_liked"></a>
+                <a class="mini-button mini-button_icon_language"></a>
+            </div>
 
             <div class="sign header__sign">
                     <button class="sign__sign-in button"><span class="button_sign-in">Вход</span></button>
@@ -35,51 +51,401 @@
             <h1 class="find-your-adversiting__title title-large">Найди свою рекламную площадь:</h1>
             <button class="find-your-advertising__button button">Подать объявление</button>
             <div class="link-cards-container">
-                <div class="link-cards-container__card link-card link-card_circle_red">
-                    <img class="link-card__image" src="images/find-your-advertising-billboard.png" alt="">
+                <div class="link-cards-container__card link-card">
+                    <div class="link-card__image link-card__image_billboard"></div>
                     <div class="link-card__text">
                         <p class="link-card__name">Наружная реклама</p>
                         <p class="link-card__digit-ads">(1923)</p>
                     </div>
                 </div>
                 <div class="link-cards-container__card link-card">
-                    <img class="link-card__image" src="images/find-your-advertising-internet.png" alt="">
+                    <div class="link-card__image link-card__image_internet"></div>
                     <div class="link-card__text">
                         <p class="link-card__name">Реклама в интернете</p>
                         <p class="link-card__digit-ads">(1923)</p>
                     </div>
                 </div>
                 <div class="link-cards-container__card link-card">
-                    <img class="link-card__image" src="images/find-your-advertising-transport.png" alt="">
+                    <div class="link-card__image link-card__image_transport"></div>
                     <div class="link-card__text">
                         <p class="link-card__name">Реклама на транспорте</p>
                         <p class="link-card__digit-ads">(1923)</p>
                     </div>
                 </div>
                 <div class="link-cards-container__card link-card">
-                    <img class="link-card__image" src="images/find-your-advertising-news.png" alt="">
+                    <div class="link-card__image link-card__image_news"></div>
                     <div class="link-card__text">
                         <p class="link-card__name link-card__name_large-text">Реклама в ср-вах массовой инф-ции</p>
                         <p class="link-card__digit-ads">(1923)</p>
                     </div>
                 </div>
                 <div class="link-cards-container__card link-card">
-                    <img class="link-card__image" src="images/find-your-advertising-sale-places.png" alt="">
+                    <div class="link-card__image link-card__image_sale-places"></div>
                     <div class="link-card__text">
                         <p class="link-card__name">Реклама на местах продаж</p>
                         <p class="link-card__digit-ads">(1923)</p>
                     </div>
                 </div>
                 <div class="link-cards-container__card link-card">
-                    <img class="link-card__image" src="images/find-your-advertising-other.png" alt="">
+                    <div class="link-card__image link-card__image_other"></div>
                     <div class="link-card__text">
                         <p class="link-card__name">Иные виды рекламы</p>
                         <p class="link-card__digit-ads">(1923)</p>
                     </div>
                 </div>
-
             </div>
         </div>
+        <div class="view-down"></div>
     </section>
+
+    <section class="main-container">
+        <a name="main" id="main"></a>
+        <section class="info-container info-container_top wrapper wrapper_large">
+            <div class="title-container-gray">
+                <h2 class="title-container-gray__title  wrapper  wrapper_mini">Топ/Вип объявления:</h2>
+            </div>
+            <div class=" ads-container-wrapper wrapper  wrapper_mini">
+                <article class="ad ad_top">
+                    <img class="ad__picture ad__picture_top" src="images/ad-cart-im1.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">РК "Мир" предлагает все виды рекламы</p>
+                        <p class="ad__price">9 300 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im2.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Свободный борд. Трасса Одесса -Киев</p>
+                        <p class="ad__price">2 896 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im3.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Магазин драгоценных металлов "Europa shop"</p>
+                        <p class="ad__price">5 600 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im4.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Реклама на транспорте</p>
+                        <p class="ad__price">9 300 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im5.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Мужской журнал GQ</p>
+                        <p class="ad__price">4 678 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im6.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Интернет магазин "Рулетка"</p>
+                        <p class="ad__price">5 450 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im7.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Печатное издание SpeedInfo</p>
+                        <p class="ad__price">12 780 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im8.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">3 light-box City-Center, Таирова</p>
+                        <p class="ad__price">4 200 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im9.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Размещение рекламы в приложениях</p>
+                        <p class="ad__price">10 250 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+            </div>
+
+            <button class="ads-container-button button">Смотреть все</button>
+        </section>
+        <section class="info-container wrapper wrapper_large">
+            <div class="title-container-gray">
+                <h2 class="title-container-gray__title  wrapper  wrapper_mini">Бесплатные объявления:</h2>
+            </div>
+            <div class=" ads-container-wrapper wrapper  wrapper_mini">
+                <article class="ad ad_top">
+                    <img class="ad__picture ad__picture_top" src="images/ad-cart-im1.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">РК "Мир" предлагает все виды рекламы</p>
+                        <p class="ad__price">9 300 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im2.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Свободный борд. Трасса Одесса -Киев</p>
+                        <p class="ad__price">2 896 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im3.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Магазин драгоценных металлов "Europa shop"</p>
+                        <p class="ad__price">5 600 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im4.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Реклама на транспорте</p>
+                        <p class="ad__price">9 300 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im5.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Мужской журнал GQ</p>
+                        <p class="ad__price">4 678 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im6.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Интернет магазин "Рулетка"</p>
+                        <p class="ad__price">5 450 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im7.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Печатное издание SpeedInfo</p>
+                        <p class="ad__price">12 780 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im8.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">3 light-box City-Center, Таирова</p>
+                        <p class="ad__price">4 200 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im9.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Размещение рекламы в приложениях</p>
+                        <p class="ad__price">10 250 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad ad_top">
+                    <img class="ad__picture ad__picture_top" src="images/ad-cart-im1.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">РК "Мир" предлагает все виды рекламы</p>
+                        <p class="ad__price">9 300 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im2.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Свободный борд. Трасса Одесса -Киев</p>
+                        <p class="ad__price">2 896 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im3.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Магазин драгоценных металлов "Europa shop"</p>
+                        <p class="ad__price">5 600 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im4.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Реклама на транспорте</p>
+                        <p class="ad__price">9 300 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im5.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Мужской журнал GQ</p>
+                        <p class="ad__price">4 678 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im6.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Интернет магазин "Рулетка"</p>
+                        <p class="ad__price">5 450 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im7.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Печатное издание SpeedInfo</p>
+                        <p class="ad__price">12 780 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im8.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">3 light-box City-Center, Таирова</p>
+                        <p class="ad__price">4 200 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+                <article class="ad">
+                    <img class="ad__picture" src="images/ad-cart-im9.png" alt="">
+                    <div class="ad__text-container">
+                        <p class="ad__title">Размещение рекламы в приложениях</p>
+                        <p class="ad__price">10 250 USD</p>
+                        <p class="ad__condition">Наружная/Транспорт</p>
+                        <p class="ad__location">Сумы</p>
+                    </div>
+                    <span class="mini-button mini-button_icon_liked mini-button_icon_liked_gray"></span>
+                </article>
+            </div>
+
+            <button class="ads-container-button button">Смотреть все</button>
+        </section>
+        <section class="info-container ad-exchange-info wrapper wrapper_large">
+            <div class="title-container-gray">
+                <h2 class="wrapper  wrapper_mini title-container-gray__title ad-exchange-info__title">БЕСПЛАТНАЯ ПЛАТФОРМА ДЛЯ ПОДАЧИ И ПОИСКА РЕКЛАМНЫХ ПЛОЩАДЕЙ
+                    ЧЕМ МЫ ВАМ ПОМОЖЕМ:
+                </h2>
+            </div>
+            <div class="ad-exchange-info__wrapper">
+                <div class="infographic">
+                    <div class="infographic__block">
+                        <div class="infographic__picture-container infographic__picture-container_megaphone"></div>
+                        <p class="infographic__text">Разобраться в видах рекламы</p>
+                    </div>
+                    <div class="infographic__block">
+                        <div class="infographic__picture-container infographic__picture-container_platform"></div>
+                        <p class="infographic__text">Выбрать оптимальную площадь для рекламы вашего продукта/бизнеса</p>
+                    </div>
+                    <div class="infographic__block">
+                        <div class="infographic__picture-container infographic__picture-container_price"></div>
+                        <p class="infographic__text">Понять ценовую политику на рекламные носители</p>
+                    </div>
+                    <div class="infographic__block">
+                        <div class="infographic__picture-container infographic__picture-container_money"></div>
+                        <p class="infographic__text">Заработать на своей рекламной площади</p>
+                    </div>
+                    <div class="infographic__block">
+                        <div class="infographic__picture-container infographic__picture-container_competitor"></div>
+                        <p class="infographic__text">Эффективно конкурировать</p>
+                    </div>
+                    <div class="infographic__block">
+                        <div class="infographic__picture-container infographic__picture-container_teamwork"></div>
+                        <p class="infographic__text">Наконец, мы поможем вам бесплатно найти друг друга</p>
+                    </div>
+                </div>
+                <img class="ad-exchange-info__picture" src="images/free-platform-picture.png" alt="">
+            </div>
+        </section>
+    </section>
+<footer class="footer">
+    <div class="footer__wrapper wrapper wrapper_medium">
+        <div class="logo header__logo">
+            <img class="logo__icon" src="images/logo-image.png" alt="logo">
+            <span class="logo__name">Platform</span>
+        </div>
+        <nav class="footer__nav nav">
+            <a href="" class="nav__link">Вопросы и ответы</a>
+            <a href="" class="nav__link">Обратная связь</a>
+            <a href="" class="nav__link">Платные сервисы</a>
+            <a href="" class="nav__link">Правила подачи объявлений</a>
+        </nav>
+        <div class="footer__up"></div>
+    </div>
+</footer>
+<script src="js/app.js"></script>
 </body>
 </html>

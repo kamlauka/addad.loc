@@ -1,12 +1,13 @@
-.header {
-  background-color: #FF000A;
-  padding: 10px 0; }
-  .header__wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center; }
+@charset "UTF-8";
+.header__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center; }
+
+.header__mini-button-container {
+  margin-right: -40px; }
 
 .logo__icon {
   vertical-align: middle; }
@@ -20,12 +21,19 @@
   color: #FFFFFF; }
 
 .mini-button {
+  display: inline-block;
   width: 35px;
   height: 30px;
-  text-decoration: none; }
+  margin-right: 10px;
+  text-decoration: none;
+  cursor: pointer; }
   .mini-button_icon_liked {
     background: url("../images/icon-like-white.png") no-repeat;
     background-size: 100% 100%; }
+    .mini-button_icon_liked_gray {
+      background: url("../images/icon-like-gray.png") no-repeat; }
+      .mini-button_icon_liked_gray:hover {
+        background: url("../images/icon-like-gray-hover.png") no-repeat; }
   .mini-button_icon_language {
     background: url("../images/icon-language.png") no-repeat;
     background-size: 100% 100%; }
@@ -38,20 +46,33 @@
   padding: 5px 5px 5px 30px;
   border-radius: 30px;
   background-color: #FFFFFF; }
+  .search-bar__select-container {
+    position: relative;
+    display: inline-block;
+    background: url("../images/arrow-down-gray.png") right 10px center no-repeat; }
   .search-bar__element {
     border: 0;
     border-right: 1px solid gray;
     width: 14em;
-    font-family: "Raleway Medium", sans-serif; }
+    font-family: "Raleway Medium", sans-serif;
+    font-size: 0.9em;
+    color: #808080; }
     .search-bar__element_region {
       width: 7em; }
   .search-bar__button {
     padding: 10px 30px;
     margin-left: 20px;
-    background-color: #FF000A; }
+    background-color: #FF000A !important; }
+
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent; }
 
 .find-your-advertising {
-  padding-top: 8em;
+  position: relative;
+  padding-top: 5em;
   padding-bottom: 100px;
   min-height: 93vh;
   box-sizing: border-box;
@@ -59,8 +80,9 @@
   background-size: cover;
   background-position: bottom; }
   .find-your-advertising__button {
-    padding: 12px 30px;
-    background-color: #393939; }
+    padding: 12px 30px; }
+    .find-your-advertising__button:hover {
+      background-color: #FF000A; }
     .find-your-advertising__button:after {
       content: '';
       display: inline-block;
@@ -101,11 +123,24 @@
   background-color: #FFFFFF;
   background: radial-gradient(circle at 30px 40px, #F8F8F8 93px, #EAEAEA 100px, #FFFFFF 100px);
   color: #808080;
-  box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer; }
   .link-card:nth-child(3n+3) {
     margin-right: 0; }
-  .link-card_circle_red {
+  .link-card:hover {
     background: radial-gradient(circle at 30px 40px, #FF000A 100px, #FFFFFF 101px); }
+    .link-card:hover .link-card__image_billboard {
+      background: url("../images/find-your-advertising-billboard-hover.svg") top no-repeat; }
+    .link-card:hover .link-card__image_internet {
+      background: url("../images/find-your-advertising-internet-hover.svg") top no-repeat; }
+    .link-card:hover .link-card__image_transport {
+      background: url("../images/find-your-advertising-transport-hover.svg") top no-repeat; }
+    .link-card:hover .link-card__image_news {
+      background: url("../images/find-your-advertising-news-hover.svg") top no-repeat; }
+    .link-card:hover .link-card__image_sale-places {
+      background: url("../images/find-your-advertising-sale-places-hover.svg") top no-repeat; }
+    .link-card:hover .link-card__image_other {
+      background: url("../images/find-your-advertising-other-hover.svg") top no-repeat; }
   .link-card__text {
     width: 12em; }
   .link-card__name {
@@ -113,21 +148,240 @@
     text-transform: uppercase;
     font-weight: 700;
     max-width: 10em; }
-    .link-card__name:after {
-      content: '';
-      display: block;
-      width: 100px;
-      border-bottom: 1px solid #C7C7C7;
-      margin-top: 10px; }
     .link-card__name_large-text {
       max-width: 11em; }
   .link-card__digit-ads {
     font-family: "Raleway Medium", sans-serif; }
   .link-card__image {
-    border-style: none;
-    margin-left: 7%;
     position: relative;
-    top: -25px; }
+    top: -25px;
+    width: 53px;
+    height: 53px;
+    margin-left: 7%;
+    background-size: contain !important; }
+    .link-card__image_billboard {
+      background: url("../images/find-your-advertising-billboard.svg") top no-repeat; }
+    .link-card__image_internet {
+      background: url("../images/find-your-advertising-internet.svg") top no-repeat; }
+    .link-card__image_transport {
+      background: url("../images/find-your-advertising-transport.svg") top no-repeat; }
+    .link-card__image_news {
+      background: url("../images/find-your-advertising-news.svg") top no-repeat; }
+    .link-card__image_sale-places {
+      background: url("../images/find-your-advertising-sale-places.svg") top no-repeat; }
+    .link-card__image_other {
+      background: url("../images/find-your-advertising-other.svg") top no-repeat; }
+
+.view-down {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 2.75em);
+  width: 5.5em;
+  height: 4.5em;
+  background: url("../images/arrow-down-red.png") center no-repeat; }
+
+.ads-container-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+
+.ads-container-button {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px 40px;
+  font-size: 0.9em; }
+  .ads-container-button:hover {
+    background-color: #FF000A; }
+
+.ad {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 31.3%;
+  margin-right: 3%;
+  margin-bottom: 2%;
+  padding: 10px 10px 10px 8px;
+  box-sizing: border-box;
+  background-color: #F6F6F6;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  cursor: pointer; }
+  .ad:nth-child(3n+3) {
+    margin-right: 0; }
+  .ad:hover {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2); }
+  .ad_top {
+    background-color: #FFE6E8; }
+    .ad_top:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 138px;
+      height: 138px;
+      background: radial-gradient(circle at 0px 0px, #FF000A 50px, transparent 51px); }
+    .ad_top:after {
+      content: 'ТОП';
+      display: block;
+      position: absolute;
+      padding: 10px;
+      color: white;
+      font-size: 0.9em; }
+  .ad__picture {
+    width: 138px;
+    height: 138px; }
+  .ad__text-container {
+    margin: 0 10px 0 19px; }
+  .ad__title {
+    font-weight: 700;
+    font-size: 0.9em;
+    max-width: 16em;
+    margin-top: 0;
+    position: relative;
+    height: 50px; }
+    .ad__title:after {
+      width: 80%;
+      position: absolute;
+      bottom: -4px; }
+  .ad__price {
+    color: #FF000A;
+    margin-bottom: 10px; }
+    .ad__price:before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 12px;
+      vertical-align: middle;
+      background: url("../images/icon-price.png") no-repeat;
+      background-size: 100% 100%; }
+  .ad__condition {
+    font-size: 0.8em;
+    color: #808080;
+    margin: 10px 0; }
+  .ad__location {
+    font-size: 0.9em;
+    color: #808080;
+    margin-bottom: 0;
+    margin-top: 10px; }
+    .ad__location:before {
+      content: '';
+      display: inline-block;
+      width: 13px;
+      height: 17px;
+      margin-right: 12px;
+      vertical-align: middle;
+      background: url("../images/icon-location.png") no-repeat;
+      background-size: 100% 100%; }
+
+.ad-exchange-info {
+  border-radius: 8px 8px 0 0 !important; }
+  .ad-exchange-info__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-left: calc((1280px - 1140px) / 2);
+    padding-right: 20px; }
+  .ad-exchange-info__title {
+    text-align: center;
+    width: 40em; }
+  .ad-exchange-info__picture {
+    width: 43%; }
+
+.infographic {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .infographic__block {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%; }
+    .infographic__block:hover .infographic__picture-container_megaphone {
+      background: url("../images/free-platform-infographic-megaphone-hover.svg") center no-repeat, #FF000A; }
+    .infographic__block:hover .infographic__picture-container_platform {
+      background: url("../images/free-platform-infographic-platform-hover.svg") center no-repeat, #FF000A; }
+    .infographic__block:hover .infographic__picture-container_price {
+      background: url("../images/free-platform-infographic-price-hover.svg") center no-repeat, #FF000A; }
+    .infographic__block:hover .infographic__picture-container_money {
+      background: url("../images/free-platform-infographic-money-hover.svg") center no-repeat, #FF000A; }
+    .infographic__block:hover .infographic__picture-container_competitor {
+      background: url("../images/free-platform-infographic-competitor-hover.svg") center no-repeat, #FF000A; }
+    .infographic__block:hover .infographic__picture-container_teamwork {
+      background: url("../images/free-platform-infographic-teamwork-hover.svg") center no-repeat, #FF000A; }
+    .infographic__block:not(:nth-last-child(1)):not(:nth-last-child(2)) {
+      margin-bottom: 70px; }
+      .infographic__block:not(:nth-last-child(1)):not(:nth-last-child(2)):after {
+        content: '';
+        display: block;
+        height: 30px;
+        border-left: 1px solid #C7C7C7;
+        position: absolute;
+        bottom: -50px;
+        left: 47px; }
+  .infographic__picture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background-size: 40% !important; }
+    .infographic__picture-container_megaphone {
+      background: url("../images/free-platform-infographic-megaphone.svg") center no-repeat, #F9F9F9; }
+    .infographic__picture-container_platform {
+      background: url("../images/free-platform-infographic-platform.svg") center no-repeat, #F9F9F9; }
+    .infographic__picture-container_price {
+      background: url("../images/free-platform-infographic-price.svg") center no-repeat, #F9F9F9; }
+    .infographic__picture-container_money {
+      background: url("../images/free-platform-infographic-money.svg") center no-repeat, #F9F9F9; }
+    .infographic__picture-container_competitor {
+      background: url("../images/free-platform-infographic-competitor.svg") center no-repeat, #F9F9F9; }
+    .infographic__picture-container_teamwork {
+      background: url("../images/free-platform-infographic-teamwork.svg") center no-repeat, #F9F9F9; }
+  .infographic__text {
+    width: 15em;
+    margin-left: 19px;
+    margin-right: 5px;
+    font-size: 0.9em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #808080; }
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center; }
+
+.footer__up {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: url("../images/arrow-up-dark-gray.png") center no-repeat, #FFFFFF;
+  cursor: pointer; }
+
+.nav__link {
+  color: white;
+  text-decoration: none;
+  font-family: "Raleway Medium", sans-serif;
+  font-size: 0.9em; }
+  .nav__link:hover {
+    text-decoration: underline; }
+  .nav__link:not(:nth-last-child(1)):after {
+    content: '|';
+    color: #FFFFFF;
+    padding: 0 20px;
+    font-size: 1.2em; }
 
 @font-face {
   font-family: "Raleway Bold";
@@ -140,6 +394,13 @@
 @font-face {
   font-family: "Raleway Medium";
   src: url("../fonts/Raleway-v4020-Medium.ttf") format("ttf"), url("../fonts/Raleway-v4020-Medium.eot") format("eot"), url("../fonts/Raleway-v4020-Medium.woff") format("woff"); }
+
+body {
+  font-family: "Roboto", sans-serif; }
+
+*:active, *:hover, *:focus {
+  outline: 0;
+  outline-offset: 0; }
 
 .wrapper {
   margin: 0 auto; }
@@ -155,7 +416,9 @@
   border-radius: 20px;
   color: white;
   font-family: "Raleway Bold", sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  background-color: #393939;
+  cursor: pointer; }
   .button_search:before {
     content: '';
     display: inline-block;
@@ -183,3 +446,38 @@
       background: url(../images/arrow-down-white.png) no-repeat;
       background-size: contain;
       background-position: bottom; }
+
+.link-card__name:after, .ad__title:after {
+  content: '';
+  display: block;
+  width: 100px;
+  border-bottom: 1px solid #C7C7C7;
+  margin-top: 10px; }
+
+.main-container {
+  background: url("../images/background-footer-1.png") left 67px bottom no-repeat, url("../images/background-footer-2.png") right 67px bottom no-repeat, #F6F6F6; }
+
+.title-container-gray {
+  background-color: #BBBBBB;
+  padding: 20px 0;
+  margin-bottom: 50px; }
+  .title-container-gray__title {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFFFFF; }
+
+.info-container {
+  border-radius: 8px;
+  margin-top: 70px !important;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.1); }
+  .info-container_top {
+    margin-top: 0 !important;
+    padding-top: 60px; }
+
+.header, .footer {
+  background-color: #FF000A;
+  padding: 10px 0; }

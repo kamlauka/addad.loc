@@ -3,11 +3,19 @@
   border-radius: 30px;
   background-color: $color-white;
 
+  &__select-container {
+    position: relative;
+    display: inline-block;
+    background: url("../images/arrow-down-gray.png") right 10px center  no-repeat;
+  }
+
   &__element {
     border: 0;
     border-right: 1px solid gray;
     width: 14em;
     font-family: $font-main-medium;
+    font-size: 0.9em;
+    color: $color-add-light;
 
     &_region {
       width: 7em;
@@ -17,7 +25,14 @@
   &__button {
     padding: 10px 30px;
     margin-left: 20px;
-    background-color: $color-main;
+    background-color: $color-main!important;
   }
 }
 
+
+.select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+}

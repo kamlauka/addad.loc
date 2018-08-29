@@ -1,6 +1,6 @@
 .find-your-advertising {
-  //padding-top: 11em;
-  padding-top: 8em;
+  position: relative;
+  padding-top: 5em;
   padding-bottom: 100px;
   min-height: 93vh;
   box-sizing: border-box;
@@ -10,7 +10,11 @@
 
   &__button {
     padding: 12px 30px;
-    background-color: $color-add;
+
+    &:hover {
+      background-color: $color-main;
+    }
+
     &:after {
       content: '';
       display: inline-block;
@@ -59,13 +63,40 @@
   background: radial-gradient(circle at 30px 40px, #F8F8F8 93px, #EAEAEA 100px, #FFFFFF 100px);
   color: $color-add-light;
   box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
 
   &:nth-child(3n+3) {
     margin-right: 0;
   }
 
-  &_circle_red {
+  &:hover {
     background: radial-gradient(circle at 30px 40px, $color-main 100px, #FFFFFF 101px);
+
+    .link-card__image {
+      &_billboard {
+        background: url('../images/find-your-advertising-billboard-hover.svg') top no-repeat;
+      }
+
+      &_internet {
+        background: url('../images/find-your-advertising-internet-hover.svg') top no-repeat;
+      }
+
+      &_transport {
+        background: url('../images/find-your-advertising-transport-hover.svg') top no-repeat;
+      }
+
+      &_news {
+        background: url('../images/find-your-advertising-news-hover.svg') top no-repeat;
+      }
+
+      &_sale-places {
+        background: url('../images/find-your-advertising-sale-places-hover.svg') top no-repeat;
+      }
+
+      &_other {
+        background: url('../images/find-your-advertising-other-hover.svg') top no-repeat;
+      }
+    }
   }
 
   &__text {
@@ -79,11 +110,7 @@
     max-width: 10em;
 
     &:after {
-      content: '';
-      display: block;
-      width: 100px;
-      border-bottom: 1px solid #C7C7C7;
-      margin-top: 10px;
+      @extend %gray-line;
     }
 
     &_large-text {
@@ -96,9 +123,44 @@
   }
 
   &__image {
-    border-style: none;
-    margin-left: 7%;
     position: relative;
     top: -25px;
+    width: 53px;
+    height: 53px;
+    margin-left: 7%;
+    background-size: contain!important;
+
+    &_billboard {
+      background: url('../images/find-your-advertising-billboard.svg') top no-repeat;
+    }
+
+    &_internet {
+      background: url('../images/find-your-advertising-internet.svg') top no-repeat;
+    }
+
+    &_transport {
+      background: url('../images/find-your-advertising-transport.svg') top no-repeat;
+    }
+
+    &_news {
+      background: url('../images/find-your-advertising-news.svg') top no-repeat;
+    }
+
+    &_sale-places {
+      background: url('../images/find-your-advertising-sale-places.svg') top no-repeat;
+    }
+
+    &_other {
+      background: url('../images/find-your-advertising-other.svg') top no-repeat;
+    }
   }
+}
+
+.view-down {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 2.75em);
+  width: 5.5em;
+  height: 4.5em;
+  background: url("../images/arrow-down-red.png") center no-repeat;
 }

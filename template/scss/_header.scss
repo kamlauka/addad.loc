@@ -1,6 +1,5 @@
 .header {
-  background-color: $color-main;
-  padding: 10px 0;
+  @extend %header-footer;
 
   &__wrapper {
     display: flex;
@@ -8,6 +7,10 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__mini-button-container {
+    margin-right: -40px;
   }
 }
 
@@ -31,13 +34,23 @@
 }
 
 .mini-button {
+  display: inline-block;
   width: 35px;
   height: 30px;
+  margin-right: 10px;
   text-decoration: none;
+  cursor: pointer;
 
   &_icon_liked {
     background: url("../images/icon-like-white.png") no-repeat;
     background-size: 100% 100%;
+
+    &_gray {
+      background: url("../images/icon-like-gray.png") no-repeat;
+      &:hover {
+        background: url("../images/icon-like-gray-hover.png") no-repeat;
+      }
+    }
   }
 
   &_icon_language {

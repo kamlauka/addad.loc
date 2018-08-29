@@ -1,0 +1,125 @@
+.ad-exchange-info {
+  border-radius: 8px 8px 0 0!important;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-left: calc((1280px - 1140px) / 2);
+    padding-right: 20px;
+  }
+
+  &__title {
+    text-align: center;
+    width: 40em;
+  }
+
+  &__picture {
+    width: 43%;
+  }
+}
+
+.infographic {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+  &__block {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+
+    &:hover {
+      .infographic__picture-container {
+        &_megaphone {
+          background: url("../images/free-platform-infographic-megaphone-hover.svg") center no-repeat, $color-main;
+        }
+
+        &_platform {
+          background: url("../images/free-platform-infographic-platform-hover.svg") center no-repeat, $color-main;
+        }
+
+        &_price {
+          background: url("../images/free-platform-infographic-price-hover.svg") center no-repeat, $color-main;
+        }
+
+        &_money {
+          background: url("../images/free-platform-infographic-money-hover.svg") center no-repeat, $color-main;
+        }
+
+        &_competitor {
+          background: url("../images/free-platform-infographic-competitor-hover.svg") center no-repeat, $color-main;
+        }
+
+        &_teamwork {
+          background: url("../images/free-platform-infographic-teamwork-hover.svg") center no-repeat, $color-main;
+        }
+      }
+    }
+
+
+    &:not(:nth-last-child(1)):not(:nth-last-child(2)) {
+      margin-bottom: 70px;
+
+      &:after {
+        content: '';
+        display: block;
+        height: 30px;
+        border-left: 1px solid #C7C7C7;
+        position: absolute;
+        bottom: -50px;
+        left: 47px;
+      }
+    }
+  }
+
+  &__picture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background-size: 40%!important;
+
+    &_megaphone {
+      background: url("../images/free-platform-infographic-megaphone.svg") center no-repeat, #F9F9F9 ;
+    }
+
+    &_platform {
+      background: url("../images/free-platform-infographic-platform.svg") center no-repeat, #F9F9F9 ;
+    }
+
+    &_price {
+      background: url("../images/free-platform-infographic-price.svg") center no-repeat, #F9F9F9 ;
+    }
+
+    &_money {
+      background: url("../images/free-platform-infographic-money.svg") center no-repeat, #F9F9F9 ;
+    }
+
+    &_competitor {
+      background: url("../images/free-platform-infographic-competitor.svg") center no-repeat, #F9F9F9 ;
+    }
+
+    &_teamwork {
+      background: url("../images/free-platform-infographic-teamwork.svg") center no-repeat, #F9F9F9 ;
+    }
+  }
+
+  &__text {
+    width: 15em;
+    margin-left: 19px;
+    margin-right: 5px;
+    font-size: 0.9em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-add-light;
+  }
+}
