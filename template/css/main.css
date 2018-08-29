@@ -115,20 +115,20 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-height: 10em;
+  min-height: 8em;
   width: 30%;
   border-radius: 8px;
   margin-right: 5%;
   margin-bottom: 5%;
   background-color: #FFFFFF;
-  background: radial-gradient(circle at 30px 40px, #F8F8F8 93px, #EAEAEA 100px, #FFFFFF 100px);
+  background: radial-gradient(circle at 40px 30px, #F8F8F8 73px, #EAEAEA 80px, #FFFFFF 80px);
   color: #808080;
   box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer; }
   .link-card:nth-child(3n+3) {
     margin-right: 0; }
   .link-card:hover {
-    background: radial-gradient(circle at 30px 40px, #FF000A 100px, #FFFFFF 101px); }
+    background: radial-gradient(circle at 40px 30px, #FF000A 80px, #FFFFFF 81px); }
     .link-card:hover .link-card__image_billboard {
       background: url("../images/find-your-advertising-billboard-hover.svg") top no-repeat; }
     .link-card:hover .link-card__image_internet {
@@ -154,7 +154,7 @@
     font-family: "Raleway Medium", sans-serif; }
   .link-card__image {
     position: relative;
-    top: -25px;
+    top: -17px;
     width: 53px;
     height: 53px;
     margin-left: 7%;

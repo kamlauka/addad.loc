@@ -54,13 +54,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-height: 10em;
+  min-height: 8em;
   width: 30%;
   border-radius: 8px;
   margin-right: 5%;
   margin-bottom: 5%;
   background-color: $color-white;
-  background: radial-gradient(circle at 30px 40px, #F8F8F8 93px, #EAEAEA 100px, #FFFFFF 100px);
+  background: radial-gradient(circle at 40px 30px, #F8F8F8 73px, #EAEAEA 80px, #FFFFFF 80px);
   color: $color-add-light;
   box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.1);
   cursor: pointer;
@@ -70,7 +70,7 @@
   }
 
   &:hover {
-    background: radial-gradient(circle at 30px 40px, $color-main 100px, #FFFFFF 101px);
+    background: radial-gradient(circle at 40px 30px, $color-main 80px, #FFFFFF 81px);
 
     .link-card__image {
       &_billboard {
@@ -124,7 +124,7 @@
 
   &__image {
     position: relative;
-    top: -25px;
+    top: -17px;
     width: 53px;
     height: 53px;
     margin-left: 7%;
