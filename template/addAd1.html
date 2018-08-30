@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/addAd.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+<header class="header">
+    <div class="header__wrapper wrapper wrapper_medium">
+        <div class="logo header__logo">
+            <img class="logo__icon" src="images/logo-image.png" alt="logo">
+            <span class="logo__name">Platform</span>
+        </div>
+
+        <div class="search-bar header__search-bar">
+            <input class="search-bar__element keywords-input" type="search" placeholder="Введите ключевое слово">
+            <div class="search-bar__select-container">
+                <select class="search-bar__element select" name="" placeholder="Выберите рубрику">
+                    <option value="">Выберите рубрику</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+            </div>
+            <div class="search-bar__select-container">
+                <select class="search-bar__element search-bar__element_region select" name="" placeholder="Регион">
+                    <option value="">Регион</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+            </div>
+            <button class="search-bar__button button"><span class="button_search">Найти</span></button>
+        </div>
+
+        <div class="header__mini-button-container">
+            <a class="mini-button mini-button_icon_liked"></a>
+            <a class="mini-button mini-button_icon_language"></a>
+        </div>
+
+        <div class="sign header__sign">
+            <button class="sign__sign-in button"><span class="button_sign-in">Вход</span></button>
+        </div>
+    </div>
+</header>
+
+
+<section class="main-view addAd">
+    <div class="wrapper wrapper_mini">
+        <h1 class="add-ad__title title-large">РАЗМЕСТИ СВОЕ ОБЪЯВЛЕНИЕ у нас:</h1>
+        <div class="gorizontal-nav step-container">
+            <div class="step-container__step step-container__step_active">
+                <span class="step-container__digit">1</span>
+                <a class="step-container__text">Выбрать рубрику</a>
+            </div>
+            <div class="step-container__step">
+                <span class="step-container__digit">2</span>
+                <a class="step-container__text">Ввод информации</a>
+            </div>
+            <div class="step-container__step">
+                <span class="step-container__digit">3</span>
+                <a class="step-container__text">Размещение объявления</a>
+            </div>
+        </div>
+        <div class="gorizontal-nav categories">
+            <p class="categories__category categories__category_active">Наружная реклама</p>
+            <p class="categories__category categories__category_active">С использованием подсветки</p>
+            <p class="categories__category">Площадка</p>
+        </div>
+        <div class="link-cards-container">
+            <div class="link-cards-container__card link-card">
+                <div class="link-card__image link-card__image_citylight"></div>
+                <div class="link-card__text">
+                    <p class="link-card__name">Ситилайты</p>
+                    <p class="link-card__digit-ads">(1923)</p>
+                </div>
+            </div>
+            <div class="link-cards-container__card link-card">
+                <div class="link-card__image link-card__image_billboard"></div>
+                <div class="link-card__text">
+                    <p class="link-card__name">Холдер</p>
+                    <p class="link-card__digit-ads">(1923)</p>
+                </div>
+            </div>
+            <div class="link-cards-container__card link-card">
+                <div class="link-card__image link-card__image_fenslight"></div>
+                <div class="link-card__text">
+                    <p class="link-card__name">Фенслайт</p>
+                    <p class="link-card__digit-ads">(1923)</p>
+                </div>
+            </div>
+            <div class="link-cards-container__card link-card">
+                <div class="link-card__image link-card__image_pillar"></div>
+                <div class="link-card__text">
+                    <p class="link-card__name link-card__name_large-text">Пиллар</p>
+                    <p class="link-card__digit-ads">(1923)</p>
+                </div>
+            </div>
+            <div class="link-cards-container__card link-card">
+                <div class="link-card__image link-card__image_stop"></div>
+                <div class="link-card__text">
+                    <p class="link-card__name">Реклама на остановках</p>
+                    <p class="link-card__digit-ads">(1923)</p>
+                </div>
+            </div>
+            <div class="link-cards-container__card link-card">
+                <div class="link-card__image link-card__image_barrier"></div>
+                <div class="link-card__text">
+                    <p class="link-card__name">Реклама на шлагбаумах</p>
+                    <p class="link-card__digit-ads">(1923)</p>
+                </div>
+            </div>
+            <div class="link-cards-container__card link-card">
+                <div class="link-card__image link-card__image_bin-box"></div>
+                <div class="link-card__text">
+                    <p class="link-card__name">Бин-боксы</p>
+                    <p class="link-card__digit-ads">(1923)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="footer__wrapper wrapper wrapper_medium">
+        <div class="logo header__logo">
+            <img class="logo__icon" src="images/logo-image.png" alt="logo">
+            <span class="logo__name">Platform</span>
+        </div>
+        <nav class="footer__nav nav">
+            <a href="" class="nav__link">Вопросы и ответы</a>
+            <a href="" class="nav__link">Обратная связь</a>
+            <a href="" class="nav__link">Платные сервисы</a>
+            <a href="" class="nav__link">Правила подачи объявлений</a>
+        </nav>
+        <div class="footer__up"></div>
+    </div>
+</footer>
+</body>
+</html>

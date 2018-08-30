@@ -144,4 +144,12 @@ body {
   padding: 10px 0;
 }
 
+.gorizontal-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: white;
+}
+
 

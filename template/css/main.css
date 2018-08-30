@@ -60,9 +60,9 @@
     .search-bar__element_region {
       width: 7em; }
   .search-bar__button {
-    padding: 10px 30px;
+    padding: 7px 30px;
     margin-left: 20px;
-    background-color: #FF000A !important; }
+    background-color: #e60012 !important; }
 
 .select {
   -webkit-appearance: none;
@@ -82,7 +82,7 @@
   .find-your-advertising__button {
     padding: 12px 30px; }
     .find-your-advertising__button:hover {
-      background-color: #FF000A; }
+      background-color: #e60012; }
     .find-your-advertising__button:after {
       content: '';
       display: inline-block;
@@ -128,7 +128,7 @@
   .link-card:nth-child(3n+3) {
     margin-right: 0; }
   .link-card:hover {
-    background: radial-gradient(circle at 40px 30px, #FF000A 80px, #FFFFFF 81px); }
+    background: radial-gradient(circle at 40px 30px, #e60012 80px, #FFFFFF 81px); }
     .link-card:hover .link-card__image_billboard {
       background: url("../images/find-your-advertising-billboard-hover.svg") top no-repeat; }
     .link-card:hover .link-card__image_internet {
@@ -141,6 +141,20 @@
       background: url("../images/find-your-advertising-sale-places-hover.svg") top no-repeat; }
     .link-card:hover .link-card__image_other {
       background: url("../images/find-your-advertising-other-hover.svg") top no-repeat; }
+    .link-card:hover .link-card__image_barrier {
+      background: url("../images/addad/hover/barrier.svg") top no-repeat; }
+    .link-card:hover .link-card__image_billboard {
+      background: url("../images/addad/hover/billboard.svg") top no-repeat; }
+    .link-card:hover .link-card__image_bin-box {
+      background: url("../images/addad/hover/bin-box.svg") top no-repeat; }
+    .link-card:hover .link-card__image_citylight {
+      background: url("../images/addad/hover/citylight.svg") top no-repeat; }
+    .link-card:hover .link-card__image_fenslight {
+      background: url("../images/addad/hover/fenslight.svg") top no-repeat; }
+    .link-card:hover .link-card__image_pillar {
+      background: url("../images/addad/hover/pillar.svg") top no-repeat; }
+    .link-card:hover .link-card__image_stop {
+      background: url("../images/addad/hover/stop.svg") top no-repeat; }
   .link-card__text {
     width: 12em; }
   .link-card__name {
@@ -171,6 +185,20 @@
       background: url("../images/find-your-advertising-sale-places.svg") top no-repeat; }
     .link-card__image_other {
       background: url("../images/find-your-advertising-other.svg") top no-repeat; }
+    .link-card__image_barrier {
+      background: url("../images/addad/default/barrier.svg") top no-repeat; }
+    .link-card__image_billboard {
+      background: url("../images/addad/default/billboard.svg") top no-repeat; }
+    .link-card__image_bin-box {
+      background: url("../images/addad/default/bin-box.svg") top no-repeat; }
+    .link-card__image_citylight {
+      background: url("../images/addad/default/citylight.svg") top no-repeat; }
+    .link-card__image_fenslight {
+      background: url("../images/addad/default/fenslight.svg") top no-repeat; }
+    .link-card__image_pillar {
+      background: url("../images/addad/default/pillar.svg") top no-repeat; }
+    .link-card__image_stop {
+      background: url("../images/addad/default/stop.svg") top no-repeat; }
 
 .view-down {
   position: absolute;
@@ -193,7 +221,7 @@
   padding: 10px 40px;
   font-size: 0.9em; }
   .ads-container-button:hover {
-    background-color: #FF000A; }
+    background-color: #e60012; }
 
 .ad {
   position: relative;
@@ -248,7 +276,7 @@
       position: absolute;
       bottom: -4px; }
   .ad__price {
-    color: #FF000A;
+    color: #e60012;
     margin-bottom: 10px; }
     .ad__price:before {
       content: '';
@@ -306,17 +334,17 @@
     align-items: center;
     width: 50%; }
     .infographic__block:hover .infographic__picture-container_megaphone {
-      background: url("../images/free-platform-infographic-megaphone-hover.svg") center no-repeat, #FF000A; }
+      background: url("../images/free-platform-infographic-megaphone-hover.svg") center no-repeat, #e60012; }
     .infographic__block:hover .infographic__picture-container_platform {
-      background: url("../images/free-platform-infographic-platform-hover.svg") center no-repeat, #FF000A; }
+      background: url("../images/free-platform-infographic-platform-hover.svg") center no-repeat, #e60012; }
     .infographic__block:hover .infographic__picture-container_price {
-      background: url("../images/free-platform-infographic-price-hover.svg") center no-repeat, #FF000A; }
+      background: url("../images/free-platform-infographic-price-hover.svg") center no-repeat, #e60012; }
     .infographic__block:hover .infographic__picture-container_money {
-      background: url("../images/free-platform-infographic-money-hover.svg") center no-repeat, #FF000A; }
+      background: url("../images/free-platform-infographic-money-hover.svg") center no-repeat, #e60012; }
     .infographic__block:hover .infographic__picture-container_competitor {
-      background: url("../images/free-platform-infographic-competitor-hover.svg") center no-repeat, #FF000A; }
+      background: url("../images/free-platform-infographic-competitor-hover.svg") center no-repeat, #e60012; }
     .infographic__block:hover .infographic__picture-container_teamwork {
-      background: url("../images/free-platform-infographic-teamwork-hover.svg") center no-repeat, #FF000A; }
+      background: url("../images/free-platform-infographic-teamwork-hover.svg") center no-repeat, #e60012; }
     .infographic__block:not(:nth-last-child(1)):not(:nth-last-child(2)) {
       margin-bottom: 70px; }
       .infographic__block:not(:nth-last-child(1)):not(:nth-last-child(2)):after {
@@ -479,5 +507,12 @@ body {
     padding-top: 60px; }
 
 .header, .footer {
-  background-color: #FF000A;
+  background-color: #e60012;
   padding: 10px 0; }
+
+.gorizontal-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: white; }

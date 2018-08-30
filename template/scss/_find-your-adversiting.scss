@@ -96,6 +96,34 @@
       &_other {
         background: url('../images/find-your-advertising-other-hover.svg') top no-repeat;
       }
+      &_barrier {
+        background: url('../images/addad/hover/barrier.svg') top no-repeat;
+      }
+
+      &_billboard {
+        background: url('../images/addad/hover/billboard.svg') top no-repeat;
+      }
+
+      &_bin-box {
+        background: url('../images/addad/hover/bin-box.svg') top no-repeat;
+      }
+
+      &_citylight {
+        background: url('../images/addad/hover/citylight.svg') top no-repeat;
+      }
+
+      &_fenslight {
+        background: url('../images/addad/hover/fenslight.svg') top no-repeat;
+      }
+
+      &_pillar {
+        background: url('../images/addad/hover/pillar.svg') top no-repeat;
+      }
+
+      &_stop {
+        background: url('../images/addad/hover/stop.svg') top no-repeat;
+      }
+
     }
   }
 
@@ -152,6 +180,34 @@
 
     &_other {
       background: url('../images/find-your-advertising-other.svg') top no-repeat;
+    }
+
+    &_barrier {
+      background: url('../images/addad/default/barrier.svg') top no-repeat;
+    }
+
+    &_billboard {
+      background: url('../images/addad/default/billboard.svg') top no-repeat;
+    }
+
+    &_bin-box {
+      background: url('../images/addad/default/bin-box.svg') top no-repeat;
+    }
+
+    &_citylight {
+      background: url('../images/addad/default/citylight.svg') top no-repeat;
+    }
+
+    &_fenslight {
+      background: url('../images/addad/default/fenslight.svg') top no-repeat;
+    }
+
+    &_pillar {
+      background: url('../images/addad/default/pillar.svg') top no-repeat;
+    }
+
+    &_stop {
+      background: url('../images/addad/default/stop.svg') top no-repeat;
     }
   }
 }

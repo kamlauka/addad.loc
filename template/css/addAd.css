@@ -1,0 +1,86 @@
+.main-view {
+  position: relative;
+  padding-top: 5em;
+  padding-bottom: 100px;
+  min-height: 93vh;
+  box-sizing: border-box;
+  background: url(../images/addad/background-main.png) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed; }
+
+.add-ad__title {
+  text-transform: initial;
+  width: 100%; }
+
+.step-container {
+  border-radius: 20px; }
+  .step-container__step {
+    position: relative;
+    width: 30%;
+    font-family: "Raleway Bold", sans-serif; }
+    .step-container__step_prev .step-container__digit:hover {
+      box-shadow: inset 4px 4px 9px 0px #B6000E, inset 0px 0px 3px 0 #B6000E;
+      background-color: #e60012;
+      color: #FFFFFF; }
+    .step-container__step_active .step-container__digit {
+      box-shadow: inset 4px 4px 9px 0px #B6000E, inset 0px 0px 3px 0 #B6000E;
+      background-color: #e60012;
+      color: #FFFFFF; }
+      .step-container__step_active .step-container__digit:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 25.5px;
+        height: 52px;
+        border-left: 1px dashed #e60012; }
+  .step-container__text {
+    display: inline-block;
+    padding: 10px;
+    margin-left: 53px;
+    font-size: 1em;
+    color: #7A7A7A; }
+  .step-container__digit {
+    display: block;
+    position: absolute;
+    top: -7px;
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    color: #DCDCDC;
+    text-align: center;
+    line-height: 2.1em;
+    background-color: #F8F8F8;
+    box-shadow: inset 4px 4px 9px 0px, inset 0px 0px 3px 0; }
+
+.categories {
+  position: relative;
+  margin-top: 58px;
+  border-radius: 8px; }
+  .categories__category {
+    display: inline-block;
+    position: relative;
+    width: 30%;
+    margin: 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    color: #808080;
+    box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.1); }
+    .categories__category_active {
+      color: #e60012;
+      cursor: pointer; }
+      .categories__category_active:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 34%;
+        right: 10px;
+        width: 9px;
+        height: 13px;
+        background: url("../images/addad/arrow-right-red.png") no-repeat;
+        background-size: 100% 100%; }
